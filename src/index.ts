@@ -12,6 +12,10 @@ app.get("/ping", async (req: Request, res: Response): Promise<Response> => {
   return res.status(200).send("Pong!");
 });
 
+app.get("/health", async (req: Request, res: Response): Promise<Response> => {
+  return res.sendStatus(200);
+});
+
 app.listen(PORT, () => {
   console.log(`Jim's API is partyin' on ${PORT}`);
 });
